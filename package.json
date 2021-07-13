@@ -11,13 +11,13 @@
     "ripple effect",
     "material-ripple"
   ],
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
   "types": "./types/index.d.ts",
   "files": [
-    "build",
-    "lib"
+    "dist",
+    "types"
   ],
   "repository": "git@github.com:arsamsarabi/awesome-mui-ripple.git",
   "author": "Arsam Sarabi <arsamsarabi@me.com> (https://arsam.dev)",
