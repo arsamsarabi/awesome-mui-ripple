@@ -1,0 +1,55 @@
+{
+  "name": "awesome-mui-ripple",
+  "description": "Add MUI ripple effect to your React components",
+  "keywords": [
+    "ripple",
+    "mui",
+    "react",
+    "component",
+    "material ui",
+    "material design",
+    "ripple effect",
+    "material-ripple"
+  ],
+  "version": "0.0.3",
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
+  "types": "./types/index.d.ts",
+  "files": [
+    "build",
+    "lib"
+  ],
+  "repository": "git@github.com:arsamsarabi/awesome-mui-ripple.git",
+  "author": "Arsam Sarabi <arsamsarabi@me.com> (https://arsam.dev)",
+  "license": "MIT",
+  "scripts": {
+    "cleanup": "rimraf dist",
+    "rollup": "rollup -c",
+    "build": "yarn cleanup && yarn rollup",
+    "prettier": "npx prettier --write src",
+    "eslint": "eslint src --ext .ts --fix",
+    "lint": "yarn eslint && yarn prettier",
+    "prepublishOnly": "yarn build && npm pack",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.53.1",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.3.5"
+  },
+  "lint-staged": {
+    "src/**/*.ts": "yarn lint"
+  },
+  "dependencies": {}
+}
