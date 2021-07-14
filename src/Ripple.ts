@@ -75,9 +75,9 @@ class Ripple {
     )
   }
 
-  public ripple(
+  public animate(
     event: MouseEvent<HTMLButtonElement>,
-    rippleColor: RippleColor,
+    rippleColor?: RippleColor,
   ): void {
     const element = event.currentTarget as HTMLElement
     if (element === null) return
@@ -98,7 +98,7 @@ class Ripple {
 
     const circle = document.createElement('span')
 
-    this.applyStyles(circle, rippleColor, rect, this.z, event)
+    this.applyStyles(circle, rippleColor || 'light', rect, this.z, event)
     this.applyAnimation(circle)
     element.appendChild(circle)
     setTimeout(() => circle.remove(), 500)
