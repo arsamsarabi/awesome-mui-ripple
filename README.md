@@ -42,7 +42,7 @@ const MyAwesomeButton: FC<MyAwesomeButtonProps> = () => {
 export default MyAwesomeButton
 ```
 
-> 💡 The animate function takes a second optional parameter for the color of the ripple.
+> 💡 The animate function takes a second optional parameter for the color of the ripple, which defaults to 'rgba(255,255,255, 0.3)'.
 > The color parameter on the animate function should be a string color value or alternatively you can pass 'dark' or 'light' to use one of the default color.
 
 ```javascript
