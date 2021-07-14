@@ -10,7 +10,7 @@ Install awesome-mui-ripple in your project
 ```
 
 Follow the example below on how to include Ripple in your components.
-1. import Ripple from 'awesome-mui-ripple'
+1. import { Ripple } from 'awesome-mui-ripple'
 2. const ripple = new Ripple();
 3. ripple.animate(event)   
 
