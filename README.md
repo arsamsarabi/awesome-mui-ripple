@@ -14,7 +14,7 @@ Follow the example below on how to include Ripple in your components.
 2. const ripple = new Ripple();
 3. ripple.animate(event)   
 
-```typescript
+```javascript
 import React, { FC, useState, MouseEvent } from 'react'
 import { Ripple } from 'awesome-mui-ripple'
 
