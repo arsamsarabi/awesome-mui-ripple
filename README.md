@@ -15,35 +15,36 @@ Follow the example below on how to include Ripple in your components.
 3. ripple.animate(event)   
 
 ```typescript
-  import React, { FC, useState, MouseEvent } from 'react'
-  import Ripple from 'awesome-mui-ripple'
+import React, { FC, useState, MouseEvent } from 'react'
+import { Ripple } from 'awesome-mui-ripple'
 
-  export type MyAwesomeButtonProps = {
-    foo: bar
+export type MyAwesomeButtonProps = {
+  foo: 'bar'
+}
+
+const MyAwesomeButton: FC<MyAwesomeButtonProps> = () => {
+  const [count, setCount] = useState<number>(0)
+  const ripple = new Ripple()
+
+  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
+    setCount(count + 1)
+    ripple.animate(event)
   }
 
-  const MyAwesomeButton: FC<MyAwesomeButtonProps> = () => {
-    const [count, setCount] = useState<number>(0)
-    const ripple = new Ripple();
+  return (
+    <>
+      <p>Ripple count: {count}</p>
+      <button onClick={handleClick}>Ripple!</button>
+    </>
+  )
+}
 
-    const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
-      setCount(count++)
-      ripple.animate(event, color)
-    }
-
-    return (
-      <>
-         <p>Ripple count: {count}</p>
-         <button onClick={handleClick}>
-           Ripple!
-         </button>
-      </>
-    )
-  }
+export default MyAwesomeButton
 ```
 
 > 💡 The animate function takes a second optional parameter for the color of the ripple.
-> The colour parameter on the animate function should be a string color value or alternatively you can pass 'dark' or 'light' to use one of the default color.
+> The color parameter on the animate function should be a string color value or alternatively you can pass 'dark' or 'light' to use one of the default color.
+
 ```javascript
 const defaultColors= {
   light: 'rgba(255,255,255, 0.3)',
